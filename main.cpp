@@ -1,7 +1,7 @@
-#include "Days/Day4.h"
+#include "Days/Day5.h"
 
 int main() {
 
-    Day4::solve();
+    Day5::solve();
 
 }
