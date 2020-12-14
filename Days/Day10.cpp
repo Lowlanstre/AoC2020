@@ -43,14 +43,10 @@ void Day10::solve() {
 
     for(int i = 0; i < adapters.size(); ++i) {
 
-        if(i-1 >= 0 && adapterways[i].second-adapterways[i-1].second <= 3) {
-            adapterways[i].first += adapterways[i-1].first;
-        }
-        if(i-2 >= 0 && adapterways[i].second-adapterways[i-2].second <= 3) {
-            adapterways[i].first += adapterways[i-2].first;
-        }
-        if(i-3 >= 0 && adapterways[i].second-adapterways[i-3].second <= 3) {
-            adapterways[i].first += adapterways[i-3].first;
+        for(int j = 1 ; j <= 3 ; ++j) {
+            if (i - j >= 0 && adapterways[i].second - adapterways[i - j].second <= 3) {
+                adapterways[i].first += adapterways[i - j].first;
+            }
         }
     }
 
